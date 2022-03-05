@@ -16,9 +16,11 @@ public class main {
                 .filter(number -> number.startsWith("1")) // filter the list
                 .collect(Collectors.toList());
         System.out.println("Filtered and mapped numbers list : " + filteredNumber);
+        Integer totalValue = numbers.stream().reduce(0, (a,b) -> a+b);
+        System.out.println("Total Value = " + totalValue);
 
         Person p = new Person();
         String personName = Optional.ofNullable(p.getName()).orElse("No Name");
-        System.out.println(personName);
+        System.out.println("Person Name = " + personName);
     }
 }
