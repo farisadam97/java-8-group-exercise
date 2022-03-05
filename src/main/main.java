@@ -9,9 +9,10 @@ public class main {
         List<Integer> numbers = Arrays.asList(1, 2, 13, 4, 5);
         System.out.println("Input Numbers : " + numbers);
 
-        // Filter data using stream
-        List<Integer> filteredNumber = numbers.stream()
-                .filter(number -> number != 1)
+        // Filter data using stream and mapping data into new structure
+        List<String> filteredNumber = numbers.stream()
+                .map(Object::toString) // mapping data to string
+                .filter(number -> number.startsWith("1")) // filter the list
                 .collect(Collectors.toList());
         System.out.println("Filtered number list : " + filteredNumber);
     }
