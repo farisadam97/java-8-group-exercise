@@ -22,12 +22,12 @@ public class main {
         //Using Period to show total days between two date
         LocalDate workDate = LocalDate.of(2022, 2, 21);
         Period p = Period.between(workDate, LocalDate.now());
-        System.out.println(p.getDays());
+        System.out.println(p.getDays()+ " Days");
 
         //Using Duration to show total duration between two instants
         LocalTime start = LocalTime.of(7, 23,22);
         LocalTime end = LocalTime.of(9, 34,13);
         long wacthTime = Duration.between(start, end).getSeconds();
-        System.out.println(wacthTime);
+        System.out.println(wacthTime + " Seconds");
     }
 }
