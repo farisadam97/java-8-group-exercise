@@ -11,7 +11,7 @@ public class main {
 
         // Filter data using stream and mapping data into new structure
         List<String> filteredNumber = numbers.stream()
-                .map(Object::toString) // mapping data to string
+                .map(Object::toString) // mapping integer list into string list
                 .filter(number -> number.startsWith("1")) // filter the list
                 .collect(Collectors.toList());
         System.out.println("Filtered number list : " + filteredNumber);
