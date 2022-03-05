@@ -14,6 +14,6 @@ public class main {
                 .map(Object::toString) // mapping integer list into string list
                 .filter(number -> number.startsWith("1")) // filter the list
                 .collect(Collectors.toList());
-        System.out.println("Filtered number list : " + filteredNumber);
+        System.out.println("Filtered and mapping numbers list : " + filteredNumber);
     }
 }
