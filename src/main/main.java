@@ -3,6 +3,7 @@ package main;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Optional;
 
 public class main {
     public static void main(String[] args) {
@@ -15,5 +16,9 @@ public class main {
                 .filter(number -> number.startsWith("1")) // filter the list
                 .collect(Collectors.toList());
         System.out.println("Filtered and mapped numbers list : " + filteredNumber);
+
+        Person p = new Person();
+        String personName = Optional.ofNullable(p.getName()).orElse("No Name");
+        System.out.println(personName);
     }
 }
